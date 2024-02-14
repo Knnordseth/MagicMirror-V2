@@ -1,7 +1,17 @@
 #MMM v2 
-oppgave - Magic mirror for Cha IT Vg2. Buss routes, canvas assignments (kalender med kalender id fra canvas api), weather and NRK district news (trøndelag)
+oppgave - 
+Magic mirror for Cha IT Vg2.
+Buss routes, 
+canvas assignments (kalender med kalender id fra canvas api),
+weather and NRK district news (trøndelag)¨,
+spoify - med spotify modul
+trafikk
+luftkvalitet ? 
 for nhn - møteromsoversikt
 
+https://github.com/Fabrizz/MMM-OnSpotify
+https://github.com/skuethe/MMM-Spotify
+https://github.com/Jacopo1891/MMM-GoogleTrafficTimes
 https://github.com/ottopaulsen/MMM-NesteBussAtB
 https://github.com/hemanthsagarb/MM-GoogleCalendar    tror denne kan brukes for custom kalender evt den innebygd i mm2
 https://github.com/sathyarajv/MMM-OpenmapWeather
