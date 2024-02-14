@@ -1,3 +1,7 @@
+electron/
+node_modules/
+
+
 # Various Node ignoramuses.
 logs
 *.log
