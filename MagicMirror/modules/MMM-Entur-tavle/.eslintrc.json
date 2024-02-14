@@ -1,0 +1,33 @@
+{
+	"extends": [
+		"eslint:recommended",
+		"plugin:@stylistic/recommended-extends"
+	],
+	"globals": {
+		"Module": "readonly",
+		"moment": "readonly"
+	},
+	"rules": {
+		"@stylistic/indent": ["error", 4 ],
+		"eqeqeq": "error",		
+		"@stylistic/quotes": ["error", "double"],
+		"@stylistic/max-len": ["error", 250],
+		"curly": "error",
+		"camelcase": "error",
+		"no-irregular-whitespace": ["error"],
+		"@stylistic/comma-dangle": ["error", "never"],
+		"@stylistic/semi": ["error", "always"]
+	},
+	"root": true,
+	"env": {
+		"browser": true,
+		"node": true,
+		"es2024": true
+	},
+	"parserOptions": {
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"globalReturn": true
+		}
+    }
+}
