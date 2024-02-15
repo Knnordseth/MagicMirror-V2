@@ -114,7 +114,21 @@ let config = {
 		       config: {
 		           // Configuration of the module goes here
 		       }
-		   },
+		   }, 
+			{
+			module: "MMM-cryptocurrency",
+			position: "center",
+			config: {
+				apikey: '4dbf7d77-40bd-48a9-816b-160aa661bae7',
+				apiDelay: 1 ,
+				currency: ['ethereum','bitcoin','cardano','chainlink'],
+				conversion: 'USD',
+				headers: ['change24h', 'change1h', 'change7d'],
+				displayType: 'logoWithChanges + showGraphs',
+				showGraphs: true
+			}
+		},
+
 	]
 };
 
