@@ -1,3 +1,5 @@
+
+
 /* MagicMirror² Config Sample
  *
  * By Michael Teeuw https://michaelteeuw.nl
@@ -37,23 +39,13 @@ let config = {
 	units: "metric",
 
 	modules: [
-	    {
-	        module: "compliments",
-		position: "center",
-	        config: {
-			updateInterval: 15000,
-		compliments: {
-			anytime: [
-				 "🚨 MogAlert from Prof. J. Barrett of Mogwarts' Magical Guidance 🚨",
-	                "🔥 Stay chill, stay sharp! 🔥 Mastery of your arcane prowess isn't just grind and hustle—it's about keeping your cool and commanding your mental game.",
-	                "Facing the fire? Inhale the chaos, exhale the power, and mog through the madness.",
-	                "Mogging = Magic + Logic. It's our elite strat to crush dilemmas with wit and wizardry.",
-	                "Feeling the heat? Hit pause, deep-dive into zen mode, and unleash your inner mogul.",
-	                "You're equipped to wreck any roadblocks.",
-	                "Lock in, level up"
-		],
-	 }
-}    },
+	/*	{
+			module: "alert",
+		},
+		{
+			module: "updatenotification",
+			position: "top_bar"
+		},*/
 		{
 			module: "clock",
 			position: "bottom_left"
@@ -65,14 +57,26 @@ let config = {
 			config: {
 				calendars: [
 					{
-					fetchInterval: 7 * 24 * 60 * 60 * 1000,
+						fetchInterval: 7 * 24 * 60 * 60 * 1000,
 						symbol: "calendar-check",
 						url: "https://outlook.office365.com/owa/calendar/e1b52cee1eef4e128ff296b747048a6c@nhn.no/18915dbc70f8400ba306ab6a01315be2553357828016458506/calendar.ics"
 					}
 				]
 			}
 		},
-			{
+	
+		/*{
+			module: "weather",
+			position: "top_right",
+			config: {
+				weatherProvider: "openweathermap",
+				type: "current",
+				location: "New York",
+				locationID: "5128581", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
+				apiKey: "YOUR_OPENWEATHER_API_KEY"
+			}
+		},*/
+		{
 			module: "weather",
 			position: "right",
 			header: "Weather Forecast",
@@ -83,59 +87,7 @@ let config = {
 				locationID: "3133880", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
 				apiKey: "89c47de4c4b27cda9ef145cfd39c968a"
 			}
-		}, 
-			{
-			    module: "MMM-OnSpotify",
-			    position: "bottom_right",
-			    config: {
-			        // Spotify authentication (Authentication Service)
-			        clientID: "key",
-			        clientSecret: "key",
-			        accessToken: "key",
-			        refreshToken: "key",
-			        // General module options [SEE BELOW]
-			        advertisePlayerTheme: true,
-			        displayWhenEmpty: "both",
-			        userAffinityUseTracks: false,
-			        prefersLargeImageSize: false,
-			        hideTrackLenghtAndAnimateProgress: false,
-			        showDebugPalette: false,
-			        userDataMaxAge: 14400,
-			        userAffinityMaxAge: 36000,
-			        deviceFilter: [],
-			        deviceFilterExclude: false,
-			        filterNoticeSubtitle: true,
-			       // language: config.language,
-			        // Update intervals [SEE BELOW]
-			        isPlaying: 1,
-			        isEmpty: 2,
-			        isPlayingHidden: 2,
-			        isEmptyHidden: 4,
-			        onReconnecting: 4,
-			        onError: 8,
-			        // Animations [SEE BELOW]
-			        mediaAnimations: false,
-			        fadeAnimations: false,
-			        textAnimations: true,
-			        transitionAnimations: true,
-			        // Spotify Code (EXPERMIENTAL)
-			        spotifyCodeExperimentalShow: true,
-			        spotifyCodeExperimentalUseColor: true,
-			        spotifyCodeExperimentalSeparateItem: true,
-			        // Theming General
-			        roundMediaCorners: true,
-			        roundProgressBar: true,
-			        showVerticalPipe: true, 
-			        useColorInProgressBar: true,
-			        useColorInTitle: true,
-			        useColorInUserData: true,
-			        showBlurBackground: true,
-			        blurCorrectionInFrameSide: false,
-			        blurCorrectionInAllSides: false,
-			        alwaysUseDefaultDeviceIcon: false,
-			        experimentalCSSOverridesForMM2: false, // [SEE BELOW]
-			    }
-	},
+		},
 		  {
 		    module: "MMM-Entur-tavle",
 		    position: "top_left",
@@ -181,11 +133,11 @@ let config = {
 		}, 
 			{
 			    module: "MMM-AVStock",
-			    position: "bottom_center", //"bottom_bar" is better for `mode:ticker`
+			    position: "center", //"bottom_bar" is better for `mode:ticker`
 			    config: {
 				//apiKey: "FFWEPZGY8H44GXUJ"
 			        timeFormat: "DD-MM HH:mm",
-			        width: null,
+			        width: "10",
 			        symbols : ["AAPL", "GOOGL", "TSLA", "NVDA"],
 			        alias: ["APPLE", "GOOGLE", "TESLA", "NVIDIA"],
 			        purchasePrice: [123.45, 1234.56, 12.34],
@@ -193,11 +145,11 @@ let config = {
 			        tickerDuration: 20,
 			        chartDays: 90,
 			        maxTableRows: null,
-			        mode: "table",                  // "table" or "ticker/ grid"
-			        // direction: "row",
+			        mode: "grid",                  // "table" or "ticker"
+			        direction: "row",
 				showChart: true,
 			        pureLine: false,
-			        chartWidth: 1500,
+			        chartWidth: null,
 			        showVolume: true,
 			        chartInterval: "daily",          // choose from ["intraday", "daily", "weekly", "monthly"]
 			        decimals : 2,
@@ -210,15 +162,7 @@ let config = {
 			        debug: false
 			    }
 			},
-			  {
-			    module: "MMM-Wallpaper",
-			    position: "fullscreen_below",
-			    config: { // See "Configuration options" for more information.
-			      source: "/r/JordanBarrett",
-			      slideInterval: 20 * 1000 , // Change slides every minute
-			      size: "auto" ,
-				 }
-			  },
+
 	]
 };
 
