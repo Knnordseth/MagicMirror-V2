@@ -99,6 +99,22 @@ let config = {
 		        exclusions: [ 'a1', 'a2', 'a3' ],
 		    }
 		},
+			 {
+		    module: 'MMM-bitcoin',
+		    position: 'top_center',
+		    config: {
+		      fiat: 'usd',          // 'usd' and 'eur' available, defaults to 'usd'
+		      showBefore: 'Bitcoin',    // will display before the bitcoin price, default 'Bitstamp'
+		      updateInterval: 30000 // update interval in milliseconds
+		    }
+		  }, 
+		      {
+		       module: "MMM-network-signal",
+		       position: "bottom_right",
+		       config: {
+		           // Configuration of the module goes here
+		       }
+		   },
 	]
 };
 
