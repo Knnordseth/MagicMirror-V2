@@ -37,7 +37,7 @@ let config = {
 	units: "metric",
 
 	modules: [
-	    {
+	   /* {
 	        module: "compliments",
 		position: "center",
 	        config: {
@@ -54,11 +54,11 @@ let config = {
 		],
 	 }
 }    },
-		{
+	*/	{
 			module: "clock",
 			position: "bottom_left"
 		},
-		{
+	/*	{
 			module: "calendar",
 			header: "kalender",
 			position: "top_right",
@@ -71,7 +71,7 @@ let config = {
 					}
 				]
 			}
-		},
+		},*/
 			{
 			module: "weather",
 			position: "right",
@@ -89,10 +89,10 @@ let config = {
 			    position: "bottom_right",
 			    config: {
 			        // Spotify authentication (Authentication Service)
-			        clientID: "key",
-			        clientSecret: "key",
-			        accessToken: "key",
-			        refreshToken: "key",
+			        clientID: "0052f3dce2a44b1eb1c07ae3abaa143a",
+			        clientSecret: "51a87c1d7a904b33b55ec8f70878d260",
+			        accessToken: "BQA0JV6A7ozSg9UCJyjhm2qVu7ijMb6WzXYkl0Y41B3C7zBJsFt83SI9k",
+			        refreshToken: "AQARQFoA29-3xe2uHlGJNEKBvrHb-QPqUU92mA7W_9T_gyNWDnuGA9ei4aQVicyLxDrviLXdau1DH-UmN5AnW47VGXKzpVhBK1AjYJnOPqLpjcw0AEzPQNMTbNtR_SrJWUQ",
 			        // General module options [SEE BELOW]
 			        advertisePlayerTheme: true,
 			        displayWhenEmpty: "both",
@@ -138,7 +138,7 @@ let config = {
 	},
 		  {
 		    module: "MMM-Entur-tavle",
-		    position: "top_left",
+		    position: "bottom_center",
 		    config: {
 		        stopId: '41620',
 		        stopType: 'StopPlace',
@@ -150,7 +150,7 @@ let config = {
 			size: "small",
 		    }
 		},
-			 {
+			/* {
 		    module: 'MMM-bitcoin',
 		    position: 'top_center',
 		    config: {
@@ -209,12 +209,12 @@ let config = {
 			        showPerformance2Purchase: true,
 			        debug: false
 			    }
-			},
+			}, */
 			  {
 			    module: "MMM-Wallpaper",
 			    position: "fullscreen_below",
 			    config: { // See "Configuration options" for more information.
-			      source: "/r/JordanBarrett",
+			      source: "https://cdn.discordapp.com/attachments/1123363475050205264/1142027217673650186/IMG_0005.jpg?ex=65e19fba&is=65cf2aba&hm=1e3cc4faa6248e9a39b790715923983dd486338a432aed054c3f6e2355b2391a&",
 			      slideInterval: 20 * 1000 , // Change slides every minute
 			      size: "auto" ,
 				 }
