@@ -8,7 +8,7 @@ spoify - med spotify modul
 trafikk
 luftkvalitet ? 
 for nhn - møteromsoversikt
-
+test
 moduler brukt
 https://github.com/Fabrizz/MMM-OnSpotify 
 https://github.com/Jacopo1891/MMM-GoogleTrafficTimes - ikke enda
