@@ -1,6 +1,6 @@
 #MMM v2 
 oppgave - 
-Magic mirror for Cha IT Vg2.
+Magic mirror for Cha IT Vg2 4braggy.
 Buss routes, 
 canvas assignments (kalender med kalender id fra canvas api),
 weather and NRK district news (trøndelag)¨,
